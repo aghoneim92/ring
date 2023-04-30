@@ -242,6 +242,8 @@ const ASM_TARGETS: &[(&str, Option<&str>, &str)] = &[
     ("x86_64", Some("macos"), "macosx"),
     ("x86_64", Some(WINDOWS), "nasm"),
     ("x86_64", None, "elf"),
+    // Since there is no macos flavor, use ios64 which is identical
+    ("aarch64", Some("macos"), "ios64"),
     ("aarch64", Some("ios"), "ios64"),
     ("aarch64", None, "linux64"),
     ("x86", Some(WINDOWS), "win32n"),
